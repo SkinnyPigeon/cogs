@@ -8,6 +8,7 @@ class TestCogs < MiniTest::Test
   def setup
     @cog1 = Cog.new(5)
     @cog2 = Cog.new(3)
+    @cog3 = Cog.new(7)
   end
 
   def test_cog_points
@@ -21,6 +22,11 @@ class TestCogs < MiniTest::Test
   def test_num_of_spins
     # binding.pry
     assert_equal(3, @cog1.num_of_spins(@cog1, @cog2))
+  end
+
+  def test_multi_num_of_spins
+    # binding.pry
+    assert_equal(21, @cog1.multi_num_of_spins(@cog1, @cog2, @cog3))
   end
 
 end
