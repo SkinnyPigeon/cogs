@@ -12,11 +12,13 @@ class Cog
   end
 
   def num_of_spins(cog1, cog2)
-    result = 0
-    while cog1.spin(cog1, cog2) % cog1.points != 0 do
-      result += 1
+
+    total = 0
+    total = cog1.spin(cog1, cog2) 
+    if total % cog1.points == 0
+      result = total / cog1.points
+      return result
     end
-    return result
   end
 
 

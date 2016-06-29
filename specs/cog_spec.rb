@@ -19,6 +19,7 @@ class TestCogs < MiniTest::Test
   end
 
   def test_num_of_spins
+    # binding.pry
     assert_equal(3, @cog1.num_of_spins(@cog1, @cog2))
   end
 
