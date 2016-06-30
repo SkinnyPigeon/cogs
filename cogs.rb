@@ -84,4 +84,9 @@ class Cog
 
 
 
+  def lowcomden(cog1, cog2, cog3)
+    result = cog1.multi_num_of_spins(cog1, cog2, cog3)
+    return result * cog1.points
+  end
+
 end

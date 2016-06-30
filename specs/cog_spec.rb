@@ -46,6 +46,7 @@ class TestCogs < MiniTest::Test
     assert_equal(171, product(result))
   end
 
+<<<<<<< HEAD
 
 
 
@@ -61,3 +62,10 @@ end
 
 
 
+=======
+  def test_lowcomden
+    assert_equal( 105, @cog1.lowcomden(@cog1, @cog2, @cog3))
+  end
+
+end
+>>>>>>> 13320ea
