@@ -29,4 +29,8 @@ class TestCogs < MiniTest::Test
     assert_equal(21, @cog1.multi_num_of_spins(@cog1, @cog2, @cog3))
   end
 
+  def test_lowcomden
+    assert_equal( 105, @cog1.lowcomden(@cog1, @cog2, @cog3))
+  end
+
 end
