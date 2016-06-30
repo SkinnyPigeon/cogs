@@ -48,6 +48,7 @@ class TestCogs < MiniTest::Test
 
 
 
+<<<<<<< HEAD
 
 
 end
@@ -61,3 +62,6 @@ end
 
 
 
+=======
+end
+>>>>>>> parent of 13320ea... repairing stuff

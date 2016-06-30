@@ -83,5 +83,8 @@ class Cog
 
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 13320ea... repairing stuff
 end
