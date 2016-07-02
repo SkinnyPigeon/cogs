@@ -4,5 +4,5 @@ require_relative('cogs')
 @cog2 = Cog.new(3)
 
 def spin
-  @cog1.points * @cog2.points
+  @cog1.teeth * @cog2.teeth
 end

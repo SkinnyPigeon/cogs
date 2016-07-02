@@ -9,10 +9,14 @@ class TestCogs < MiniTest::Test
     @cog1 = Cog.new(5)
     @cog2 = Cog.new(3)
     @cog3 = Cog.new(7)
+    @cog4 = Cog.new(9)
+
+    @cogs=[@cog1, @cog2, @cog3]
   end
 
+
   def test_cog_points
-    assert_equal(5, @cog1.points)
+    assert_equal(5, @cog1.teeth)
   end
 
   def test_spin
@@ -20,17 +24,32 @@ class TestCogs < MiniTest::Test
   end
 
   def test_num_of_spins
-    # binding.pry
-    assert_equal(3, @cog1.num_of_spins(@cog1, @cog2))
+    assert_equal(35, @cog1.num_of_spins(@cog2, @cogs))
   end
 
-  def test_multi_num_of_spins
-    # binding.pry
-    assert_equal(21, @cog1.multi_num_of_spins(@cog1, @cog2, @cog3))
-  end
 
   def test_lowcomden
-    assert_equal( 105, @cog1.lowcomden(@cog1, @cog2, @cog3))
+    assert_equal( 105, @cog1.lowcomden(@cog1, @cogs))
   end
 
+  # def test_big_spin
+  #   # binding.pry
+  #   # nil
+  #   assert_equal(945, @cog1.big_spin(@cogs))
+  # end
+
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
+

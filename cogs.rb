@@ -1,44 +1,49 @@
 class Cog
 
-  attr_reader(:points)
+  attr_reader(:teeth)
 
-  def initialize(points)
-    @points = points
+  def initialize(teeth)
+    @teeth = teeth
   end
 
   def spin(cog1, cog2)
-    result = cog1.points * cog2.points
+    result = cog1.teeth * cog2.teeth
     return result
   end
 
-  def multi_spin(cog1, cog2, cog3)
-    result = cog1.points * cog2.points * cog3.points
-    return result
-  end
-
-  def num_of_spins(cog1, cog2)
-
-    total = 0
-    total = cog1.spin(cog1, cog2) 
-    if total % cog1.points == 0
-      result = total / cog1.points
+  def num_of_spins(cog1, cogs)
+    total = cog1.big_spin( cogs ) 
+    if total % cog1.teeth == 0
+      result = total / cog1.teeth
       return result
     end
   end
 
-  def multi_num_of_spins(cog1, cog2, cog3)
-
-    total = 0
-    total = cog1.multi_spin(cog1, cog2, cog3) 
-    if total % cog1.points == 0
-      result = total / cog1.points
-      return result
-    end
+  def lowcomden( cog1 ,cogs )
+    result = cog1.big_spin( cogs )
+    return result
   end
 
-  def lowcomden(cog1, cog2, cog3)
-    result = cog1.multi_num_of_spins(cog1, cog2, cog3)
-    return result * cog1.points
+  def big_spin( cogs )
+    total = 1
+    for cog in cogs do
+      result = cog.teeth
+      total *= result
+    end
+    return total
   end
 
 end
+
+
+
+
+
+
+
+
+
+
+
+
+
